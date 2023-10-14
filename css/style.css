@@ -1,167 +1,355 @@
 /****** General ***********/
 * {
-    font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 :root {
-    --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
-    --filter-bg-color: #DEEBFF;
+  --main-color: #0065fc;
+  --main-bg-color: #f2f2f2;
+  --filter-bg-color: #deebff;
 }
 
 .fa-solid {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 body {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .main-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .section-title {
-    margin: 0;
-    font-size: 22px;
+  margin: 0;
+  font-size: 22px;
+}
+h1 {
+  margin-bottom: 0; /* Removes bottom margin of h1 */
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+p.custom-style {
+  margin-top: 0; /* Removes top margin of p */
+  /* the rest of your p.custom-style properties... */
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18.78px;
+  color: #000000;
+  width: 1340px;
+  height: 19px;
 }
 
 .card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
 .card img {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .card-title {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .euro {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .neutral-star {
-    color: var(--main-bg-color)
+  color: var(--main-bg-color);
 }
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
-    border-radius: 20px;
-    padding: 30px;
-    box-sizing: border-box;
+  background-color: var(--main-bg-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/****** header ***********/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Pour s'assurer que le header reste au-dessus des autres éléments */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 60px;
+  margin-right: 10px;
+}
+
+/* Styles de navigation */
+nav ul {
+  list-style-type: none;
+  padding-top: 10px; /* Réduit l'espacement du haut */
+  padding-bottom: 40px; /* Augmente l'espacement du bas pour compenser */
+  margin: 0;
+  display: flex;
+  gap: 100px;
+  font-family: "Raleway", sans-serif; /* Utilisez la police Raleway */
+  font-size: 14px; /* Taille de police de 14px */
+}
+
+/* * {
+  outline: 1px solid red;
+} */
+
+nav li a {
+  max-width: 100px; /* Ajustez cette valeur selon vos besoins */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+  transition: color 0.3s; /* Effet de transition pour le survol */
+}
+
+nav li a:hover {
+  color: var(--main-color);
+}
+
+/* Ajustements pour le lien actif */
+nav li a.active {
+  border-top: 2px solid var(--main-color);
+  padding-top: 16px;
+  margin-top: 2px;
+}
+
+/***************** shearch bar */
+.search-container {
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.under-title {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 28%;
+  background-color: #f0f0f0; /* Fond gris */
+  border-radius: 15px; /* Contour arrondi */
+}
+
+.fa-location-dot {
+  color: #000000;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  margin-right: 10px;
+}
+.search-input {
+  width: 60%;
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+}
+
+.search-button {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 20px;
+  border-top-left-radius: 0; /* Coin supérieur gauche sans arrondi */
+  border-bottom-left-radius: 0; /* Coin inférieur gauche sans arrondi */
+  border-top-right-radius: 15px; /* Coin supérieur droit arrondi */
+  border-bottom-right-radius: 15px; /* Coin inférieur droit arrondi */
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.location-icon {
+  display: flex; /* added */
+  align-items: center; /* added */
+  justify-content: center; /* added */
+  margin-left: 13px; /* adjusted margin to overlap the icon */
+  z-index: 1; /* added to bring it to the front */
+}
+
+.search-button:hover {
+  background-color: #0056b3;
 }
 
 /****** Hebergements ***********/
 .hebergements {
-    width: 65%;
+  width: 65%;
 }
 
 /****** Populaires ***********/
 .populaires {
-    width: 32%;
+  width: 32%;
 }
 
 .populaires-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .populaires-cards .card {
-    display: flex;
-    margin-top: 33px;
+  display: flex;
+  margin-top: 33px;
 }
 
 .populaires-cards img {
-    width: 33%;
-    height: 136px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+  width: 33%;
+  height: 136px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .populaires-cards .card-content {
-    width: 67%;
-    padding-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
+  width: 67%;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .populaires-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
+  margin-top: 10px;
+  margin-bottom: 4px;
 }
 
 .populaires-cards .card-subtitle {
-    margin: 0;
+  margin: 0;
 }
 
 .populaires-cards .card-rating {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
-
-
-
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-    .hebergements-and-populaires {
-        flex-direction: column;
-    }
+  .hebergements-and-populaires {
+    flex-direction: column;
+  }
 
-    .hebergements {
-        width: 100%;
-    }
+  .hebergements {
+    width: 100%;
+  }
 
-    .populaires {
-        width: 100%;
-        margin-top: 50px;
-    }
+  .populaires {
+    width: 100%;
+    margin-top: 50px;
+  }
 
-    .populaires-cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  .populaires-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    .populaires-cards a {
-        width: 30%;
-    }
+  .populaires-cards a {
+    width: 30%;
+  }
 
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
+  .populaires-cards .card-title {
+    font-size: 14px;
+  }
 
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
-    }
+  .populaires-cards .card-subtitle {
+    font-size: 13px;
+  }
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    /* ... */
+/* Vos styles actuels... */
+
+/* Vos styles actuels... */
+
+/* Media Query pour les écrans de petite taille (par exemple, moins de 768px) */
+@media (max-width: 768px) {
+  /* Changements généraux pour le header */
+  header {
+    flex-direction: column; /* Passe en disposition verticale */
+    padding: 0; /* Ajout d'un espacement vertical */
+    align-items: center; /* Centrage horizontal du contenu */
+  }
+
+  /* Styles pour le conteneur du logo */
+  .logo-container {
+    justify-content: center; /* Centre le logo horizontalement */
+    margin-bottom: 15px; /* Espacement entre le logo et la navigation */
+    width: 100%; /* Utilisez toute la largeur disponible */
+    text-align: center; /* Centre le texte */
+  }
+
+  /* Styles de navigation pour mobile */
+  /* Assurez-vous que le conteneur de liste n'a pas de padding ou de margin à gauche */
+
+  /* Ajustements pour le lien actif sur mobile */
+  nav li a.active {
+    border-top: none; /* Supprime la bordure du haut */
+    border-bottom: 2px solid var(--main-color); /* Ajoute une bordure en bas */
+    padding-top: 0;
+    padding-bottom: 16px; /* Espacement sous le lien */
+    margin-top: 0;
+    width: 100%; /* La bordure utilise toute la largeur disponible */
+    text-align: center; /* Centre le texte du lien */
+  }
+
+  /* Assurez-vous que le conteneur de liste n'a pas de padding ou de margin à gauche */
+  nav ul {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  /* Assurez-vous que le premier élément de liste n'a pas de padding ou de margin à gauche */
+  nav li:first-child {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  /* Pour le premier lien dans le premier élément de liste */
+  nav li:first-child a {
+    padding-left: 0;
+    margin-left: 0;
+  }
 }
