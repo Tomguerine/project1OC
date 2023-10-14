@@ -211,6 +211,28 @@ nav li a.active {
 .search-button:hover {
   background-color: #0056b3;
 }
+/****** Filtres ***********/
+.filter-button {
+  background-color: #ffffff; /* White background */
+  border: 1px solid #d1d1d1; /* Light grey border */
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px; /* Top/bottom and left/right padding */
+  margin: 5px; /* Space between buttons */
+  font-size: 14px; /* Text size */
+  cursor: pointer; /* Hand cursor on hover */
+  display: inline-block; /* Displayed inline with spacing */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.filter-button .icon {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.filter-button:hover {
+  background-color: #e6e6e6; /* Light grey background on hover */
+}
+
+/* Add additional CSS if you have active states or other states for the button */
 
 /****** Hebergements ***********/
 .hebergements {
