@@ -393,6 +393,82 @@ nav li a.active {
   margin-bottom: 5px;
 }
 
+/******** activity ***********/
+
+/* Recommended Places Section */
+/* Recommended Places Section */
+.activity {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.activity-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Grid display for cards */
+.activity-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 20px; /* Spacing between cards */
+}
+
+/* Ensuring no margin or padding at the top of the card */
+.activity-cards .card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 500px;
+  transition: transform 0.2s;
+  margin-top: 0; /* Removes the top margin */
+  padding-top: 0; /* Removes the top padding */
+  position: relative; /* Added for absolute positioning of child elements */
+}
+
+/* Ensuring the image itself doesn't have any margin and fills the container */
+.activity-cards img {
+  width: 100%; /* Changed to 100% to fill the width */
+  height: 90%; /* Changed to 100% to fill the height */
+  object-fit: cover; /* Ensures the aspect ratio of the image is maintained */
+  margin: 0; /* Removes any margins */
+  padding: 0; /* Removes any padding */
+  position: absolute; /* Added to position the image */
+  top: 0; /* Positions the image at the top of the container */
+  left: 0; /* Positions the image at the left of the container */
+  z-index: -1; /* Added to place the image behind other content */
+}
+
+/* Style for card content */
+.activity-cards .card-content {
+  position: fixed; /* Added to position the content */
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+/* Style for card title */
+.activity-cards .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* Style for card description */
+.activity-cards .card-description {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
