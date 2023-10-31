@@ -468,6 +468,34 @@ nav li a.active {
   margin: 0;
 }
 
+/******** footer ***********/
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+  margin: 5px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
