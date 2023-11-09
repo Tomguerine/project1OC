@@ -141,6 +141,8 @@ nav li a:hover {
 }
 
 /* Ajustements pour le lien actif */
+/* Base styles for navigation links */
+
 nav li a.active {
   border-top: 2px solid var(--main-color);
   padding-top: 16px;
@@ -167,7 +169,7 @@ nav li a.active {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-  width: 28%;
+  width: 330px;
   background-color: #f0f0f0; /* Fond gris */
   border-radius: 15px; /* Contour arrondi */
 }
@@ -250,6 +252,9 @@ nav li a.active {
   font-weight: bold;
   color: #000000; /* Black color for the text */
 }
+.search-input::placeholder {
+  font-weight: bold;
+}
 /****** note ***********/
 /* Styling for the note */
 .note {
@@ -310,14 +315,14 @@ nav li a.active {
 /* Styles for card image */
 .hebergements-cards .card img {
   width: 100%;
-  height: 100px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  height: 120px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 /* Styles for card content */
 .hebergements-cards .card-content {
-  padding: 15px; /* Padding all around for spacing */
+  padding: 1px; /* Padding all around for spacing */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -357,6 +362,7 @@ nav li a.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 44px;
 }
 
 .populaires-cards .card {
@@ -367,8 +373,8 @@ nav li a.active {
 .populaires-cards img {
   width: 33%;
   height: 136px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .populaires-cards .card-content {
@@ -423,10 +429,10 @@ nav li a.active {
 
 /* Ensuring no margin or padding at the top of the card */
 .activity-cards .card {
-  background-color: #ffffff;
+  background-color: hsl(0, 0%, 100%);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 500px;
+  width: 100%;
   transition: transform 0.2s;
   margin-top: 0;
   padding-top: 0;
@@ -434,13 +440,14 @@ nav li a.active {
 }
 
 /* Ensuring the image itself doesn't have any margin and fills the container */
+/* Ensuring the image itself doesn't have any margin and fills the container */
 .activity-cards img {
   width: 100%;
-  height: 90%;
+  height: 30vh;
   object-fit: cover;
   margin: 0;
   padding: 0;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   z-index: -1;
@@ -449,7 +456,6 @@ nav li a.active {
 /* Style for card content */
 .activity-cards .card-content {
   position: fixed;
-  margin-bottom: 15px;
   padding: 15px;
 }
 
@@ -458,7 +464,7 @@ nav li a.active {
   font-size: 18px;
   font-weight: bold;
   margin: 0;
-  margin-top: 450px;
+  margin-bottom: 2px;
 }
 
 /* Style for card description */
