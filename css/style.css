@@ -141,8 +141,6 @@ nav li a:hover {
 }
 
 /* Ajustements pour le lien actif */
-/* Base styles for navigation links */
-
 nav li a.active {
   border-top: 2px solid var(--main-color);
   padding-top: 16px;
@@ -169,7 +167,7 @@ nav li a.active {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-  width: 330px;
+  width: 28%;
   background-color: #f0f0f0; /* Fond gris */
   border-radius: 15px; /* Contour arrondi */
 }
@@ -179,13 +177,24 @@ nav li a.active {
   font-size: 20px;
   border-radius: 50%;
   background-color: #f2f2f2;
-  margin-right: 10px;
+  margin-right: 13px;
 }
 .search-input {
-  width: 60%;
-  padding: 10px 20px;
-  font-size: 15px;
+  padding: 10px;
+  padding-right: 5px;
+  font-size: 14px;
   border: none;
+  text-align: center;
+  font-weight: bold; /* Makes the placeholder text bold */
+  color: black; /* Sets the placeholder text color to black */
+  opacity: 1;
+}
+/* Style for the input field placeholder */
+.search-input::placeholder {
+  font-weight: bold; /* Makes the placeholder text bold */
+  color: black; /* Sets the placeholder text color to black */
+  /* Additional styles to ensure compatibility across different browsers */
+  opacity: 1; /* Fixes the inconsistent opacity in different browsers */
 }
 
 .search-button {
@@ -252,9 +261,6 @@ nav li a.active {
   font-weight: bold;
   color: #000000; /* Black color for the text */
 }
-.search-input::placeholder {
-  font-weight: bold;
-}
 /****** note ***********/
 /* Styling for the note */
 .note {
@@ -304,6 +310,8 @@ nav li a.active {
 
 /* Styles for each card */
 .hebergements-cards .card {
+  min-height: 200px;
+
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
@@ -315,23 +323,24 @@ nav li a.active {
 /* Styles for card image */
 .hebergements-cards .card img {
   width: 100%;
-  height: 120px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  height: 130px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 /* Styles for card content */
 .hebergements-cards .card-content {
-  padding: 1px; /* Padding all around for spacing */
+  padding: 10px; /* Padding all around for spacing */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
+  min-height: 100px;
 }
 
 /* Styles for card title */
 .hebergements-cards .card-title {
-  margin-top: 10px;
+  margin-top: 1px;
   margin-bottom: 4px;
   font-weight: bold; /* Bold font for the title */
 }
@@ -339,12 +348,15 @@ nav li a.active {
 /* Styles for card subtitle (price) */
 .hebergements-cards .card-subtitle {
   margin: 0;
+  padding-top: 4px;
+  padding-bottom: 3px;
+
+  font-size: 13 px;
   color: #4a4a4a; /* Slight grey color for subtitle */
 }
 
 /* Styles for card rating */
 .hebergements-cards .card-rating {
-  margin-bottom: 5px;
   color: #007bff; /* Blue color for the star ratings */
 }
 
@@ -362,7 +374,7 @@ nav li a.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 44px;
+  padding-bottom: 7px;
 }
 
 .populaires-cards .card {
@@ -373,8 +385,8 @@ nav li a.active {
 .populaires-cards img {
   width: 33%;
   height: 136px;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .populaires-cards .card-content {
@@ -388,7 +400,7 @@ nav li a.active {
 
 .populaires-cards .card-title {
   margin-top: 10px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .populaires-cards .card-subtitle {
@@ -416,7 +428,7 @@ nav li a.active {
 
 .section-title {
   margin: 0;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -429,25 +441,24 @@ nav li a.active {
 
 /* Ensuring no margin or padding at the top of the card */
 .activity-cards .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 100%;
+  height: 55vh;
   transition: transform 0.2s;
+  padding: 0;
   margin-top: 0;
   padding-top: 0;
   position: relative;
 }
 
 /* Ensuring the image itself doesn't have any margin and fills the container */
-/* Ensuring the image itself doesn't have any margin and fills the container */
 .activity-cards img {
   width: 100%;
-  height: 30vh;
+  height: 88%;
   object-fit: cover;
   margin: 0;
   padding: 0;
-  /* position: absolute; */
   top: 0;
   left: 0;
   z-index: -1;
@@ -455,16 +466,24 @@ nav li a.active {
 
 /* Style for card content */
 .activity-cards .card-content {
-  position: fixed;
-  padding: 15px;
+  /* position: fixed; */
+  font-size: 10px;
+  padding-left: 12px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+
+  min-height: 300px;
 }
 
 /* Style for card title */
 .activity-cards .card-title {
-  font-size: 18px;
+  font-size: 12px;
   font-weight: bold;
   margin: 0;
-  margin-bottom: 2px;
+  padding-top: 0%;
+  padding-bottom: 5%;
+  margin-top: 0px;
+  min-height: 500px;
 }
 
 /* Style for card description */
