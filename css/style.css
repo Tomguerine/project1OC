@@ -319,7 +319,7 @@ nav li a.active {
 
 /* Styles for each card */
 .hebergements-cards .card {
-  min-height: 200px;
+  min-height: 250px;
 
   display: flex;
   flex-direction: column; /* Stack elements vertically */
@@ -344,7 +344,6 @@ nav li a.active {
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  min-height: 100px;
 }
 
 /* Styles for card title */
@@ -453,7 +452,7 @@ nav li a.active {
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 55vh;
+  height: 270px;
   transition: transform 0.2s;
   padding: 0;
   margin-top: 0;
@@ -464,7 +463,7 @@ nav li a.active {
 /* Ensuring the image itself doesn't have any margin and fills the container */
 .activity-cards img {
   width: 100%;
-  height: 88%;
+  height: 80%;
   object-fit: cover;
   margin: 0;
   padding: 0;
@@ -476,23 +475,17 @@ nav li a.active {
 /* Style for card content */
 .activity-cards .card-content {
   /* position: fixed; */
-  font-size: 10px;
-  padding-left: 12px;
-  padding-top: 5%;
-  padding-bottom: 5%;
-
-  min-height: 300px;
+  font-size: 19px;
+  padding: 12px;
 }
 
 /* Style for card title */
 .activity-cards .card-title {
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 14px;
   margin: 0;
   padding-top: 0%;
   padding-bottom: 5%;
   margin-top: 0px;
-  min-height: 500px;
 }
 
 /* Style for card description */
@@ -635,8 +628,8 @@ footer {
   }
   /* Styles for the container of the cards */
   .hebergements-cards {
-    display: grid;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     gap: 20px; /* Spacing between cards */
     margin: 20px 0; /* Top and bottom margin for some spacing */
   }
