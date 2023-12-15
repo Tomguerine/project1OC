@@ -30,15 +30,11 @@ a {
   text-decoration: none;
 }
 
-.section-title {
-  margin: 0;
-  font-size: 22px;
-}
 h1 {
   margin-bottom: 0; /* Removes bottom margin of h1 */
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 p.custom-style {
@@ -162,6 +158,7 @@ nav li a.active {
   font-weight: 400;
   font-size: 16px;
   color: #000000;
+  margin-top: 5px;
   margin-bottom: 20px;
 }
 
@@ -374,6 +371,9 @@ nav li a.active {
 .hebergements-cards .card:hover {
   transform: scale(1.05); /* Scale the card slightly on hover */
 }
+.view-more {
+  font-weight: bold; /* Met le texte en gras */
+}
 
 /****** Populaires ***********/
 .populaires {
@@ -425,7 +425,7 @@ nav li a.active {
 
 /* Recommended Places Section */
 .activity {
-  margin-top: 50px;
+  margin-top: 0px;
   padding: 20px;
 }
 
@@ -433,12 +433,12 @@ nav li a.active {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .section-title {
   margin: 0;
-  font-size: 20px;
+  margin-bottom: 15 px;
   font-weight: bold;
 }
 
@@ -454,8 +454,9 @@ nav li a.active {
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 270px;
+  height: 300px;
   transition: transform 0.2s;
+  margin: 0px;
   padding: 0;
   margin-top: 0;
   padding-top: 0;
@@ -477,17 +478,18 @@ nav li a.active {
 /* Style for card content */
 .activity-cards .card-content {
   /* position: fixed; */
-  font-size: 19px;
+  margin: 0px;
   padding: 12px;
+  padding-top: 6px;
 }
 
 /* Style for card title */
 .activity-cards .card-title {
-  font-size: 14px;
+  font-size: 18px;
   margin: 0;
-  padding-top: 0%;
-  padding-bottom: 10%;
-  margin-top: 0px;
+  padding-left: 5px;
+  padding: 5px;
+  padding-bottom: 5px;
 }
 
 /* Style for card description */
@@ -502,6 +504,7 @@ nav li a.active {
 footer {
   display: flex;
   justify-content: space-around;
+  margin-top: 50px;
   padding: 20px;
   background-color: #f0f0f0;
 }
@@ -510,6 +513,7 @@ footer {
   flex: 1;
   padding: 10px;
   margin: 5px;
+  margin-top: 0px;
 }
 
 .footer-section h3 {
@@ -519,11 +523,15 @@ footer {
 
 .footer-section ul {
   list-style-type: none;
-  padding: 0;
+  padding: 0px;
+  margin: 0px;
+  font-size: 17px;
 }
 
 .footer-section li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-size: 20px;
 }
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -540,7 +548,7 @@ footer {
 
   .populaires {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 25px;
   }
 
   .populaires-cards {
@@ -551,10 +559,6 @@ footer {
 
   .populaires-cards a {
     width: 30%;
-  }
-
-  .populaires-cards .card-title {
-    font-size: 14px;
   }
 
   .populaires-cards .card-subtitle {
@@ -602,8 +606,8 @@ footer {
   /* Styles pour le conteneur du logo */
   .logo-container {
     justify-content: center;
-    padding-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 15px;
+    margin-bottom: 15px;
     width: 100%;
     text-align: center;
   }
@@ -659,16 +663,16 @@ footer {
     margin-left: 0;
   }
   .search-container {
-    margin-left: 20px;
-    margin-right: 20px;
-    width: calc(100% - 40px);
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% - 30px);
   }
   /****** Schearch Box ***********/
   .search-box {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
     height: 49px;
-    width: calc(100% - 40px);
+    width: calc(100% - 30px);
     align-items: center;
     margin-bottom: 20px;
     background-color: #f0f0f0; /* Fond gris */
@@ -703,9 +707,9 @@ footer {
   .filters {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 20px;
-    margin-right: 20px;
-    width: calc(100% - 40px);
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% - 30px);
     justify-content: space-between; /* Centrer les boutons et répartir l'espace uniformément */
     align-items: center; /* Aligner les éléments verticalement */
     margin-bottom: 20px; /* Espace en dessous du conteneur de filtres */
@@ -715,24 +719,36 @@ footer {
     .filters > div {
     /* Ajoutez cette ligne si le titre 'Filtres' est dans une div */
     flex-basis: 100%; /* Force le titre à prendre toute la largeur */
-    text-align: center; /* Centrer le titre */
     margin-bottom: 10px; /* Espace en dessous du titre */
-    padding-right: 10000px;
+    margin: 20 0;
   }
   .filter-button,
   .filter-button-active {
     flex-basis: calc(
       50% - 10px
     ); /* Prend la moitié de l'espace disponible, en soustrayant la marge */
-    text-align: center; /* Centrer le texte dans le bouton */
+    /* font-size: 12px; */
+    text-align: left; /* Align text to the left inside the button */
+
+    padding: 13px;
     margin: 5px; /* Maintient un petit espace autour des boutons */
   }
+  .filter-button .icon,
+  .filter-button-active .icon {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .filter-button:hover,
+  .filter-button-active:hover {
+    background-color: #deebff; /* Change la couleur de fond en #DEEBF7 lorsque la souris survole les éléments */
+  }
+
   /****** note ***********/
 
   .note {
-    margin-left: 20px;
-    margin-right: 20px;
-    width: calc(100% - 40px);
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% - 30px);
   }
   /****** Hebergements ***********/
   .hebergements {
@@ -741,14 +757,17 @@ footer {
     width: 100%; /* Updated width to fit the container */
     display: grid;
     gap: 20px; /* Spacing between cards */
-    padding: 20px 0; /* Added padding to space out from top and bottom */
+    padding: 15px 0; /* Added padding to space out from top and bottom */
     box-sizing: border-box;
     background-color: #ffffff !important;
   }
 
   .hebergements-and-populaires section {
     border-radius: 0px;
-    padding: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    padding-top: 15px;
     box-sizing: border-box;
     background-color: #ffffff; /* Couleur de fond mise à blanc */
   }
@@ -762,7 +781,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 20px; /* Spacing between cards */
-    margin: 20px 0; /* Top and bottom margin for some spacing */
+    margin: 0px; /* Top and bottom margin for some spacing */
   }
 
   /* Styles for each card */
@@ -792,7 +811,6 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
-    min-height: 100px;
   }
 
   /* Styles for card title */
@@ -839,6 +857,13 @@ footer {
   .populaires-cards a {
     width: 100%;
   }
+  .populaires-cards .card {
+    margin-top: 15px;
+  }
+  .populaires-title {
+    margin-top: 10px;
+    padding: 0px;
+  }
 
   /******** activity ***********/
   .activity-cards {
@@ -847,6 +872,28 @@ footer {
       1,
       1fr
     ); /* ou toute autre configuration adaptée aux mobiles */
+  }
+  .activity-cards .card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 200px;
+    transition: transform 0.2s;
+    margin: 0px;
+    padding: 0;
+    margin-top: 0;
+    padding-top: 0;
+    position: relative;
+  }
+  .activity-cards img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
   /******** footer ***********/
   footer {
