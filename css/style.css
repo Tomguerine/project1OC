@@ -343,8 +343,6 @@ nav li a.active {
   margin: 0;
   padding-top: 4px;
   padding-bottom: 3px;
-
-  font-size: 13 px;
   color: #4a4a4a;
 }
 
@@ -420,8 +418,7 @@ nav li a.active {
 }
 
 .section-title {
-  margin: 0;
-  margin-bottom: 15 px;
+  margin-bottom: 15px;
   font-weight: bold;
 }
 
@@ -671,23 +668,17 @@ footer {
     margin-bottom: 20px;
   }
 
-  .filters > span, /* Ciblez le span qui contient le titre 'Filtres' */
-    .filters > div {
-    /* Ajoutez cette ligne si le titre 'Filtres' est dans une div */
-    flex-basis: 100%; /* Force le titre à prendre toute la largeur */
-    margin-bottom: 10px; /* Espace en dessous du titre */
-    margin: 20 0;
+  .filters > span,
+  .filters > div {
+    flex-basis: 100%;
+    margin-bottom: 10px;
   }
   .filter-button,
   .filter-button-active {
-    flex-basis: calc(
-      50% - 10px
-    ); /* Prend la moitié de l'espace disponible, en soustrayant la marge */
-    /* font-size: 12px; */
-    text-align: left; /* Align text to the left inside the button */
-
+    flex-basis: calc(50% - 10px);
+    text-align: left;
     padding: 13px;
-    margin: 5px; /* Maintient un petit espace autour des boutons */
+    margin: 5px;
   }
   .filter-button .icon,
   .filter-button-active .icon {
@@ -696,7 +687,7 @@ footer {
   }
   .filter-button:hover,
   .filter-button-active:hover {
-    background-color: #deebff; /* Change la couleur de fond en #DEEBF7 lorsque la souris survole les éléments */
+    background-color: #deebff;
   }
 
   /****** note ***********/
@@ -708,11 +699,11 @@ footer {
   }
   /****** Hebergements ***********/
   .hebergements {
-    order: 2; /* La section hébergements sera affichée en second */
-    width: 100%; /* Updated width to fit the container */
+    order: 2;
+    width: 100%;
     display: grid;
-    gap: 20px; /* Spacing between cards */
-    padding: 15px 0; /* Added padding to space out from top and bottom */
+    gap: 20px;
+    padding: 15px 0;
     box-sizing: border-box;
     background-color: #ffffff !important;
   }
@@ -724,7 +715,7 @@ footer {
     margin-bottom: 20px;
     padding-top: 15px;
     box-sizing: border-box;
-    background-color: #ffffff; /* Couleur de fond mise à blanc */
+    background-color: #ffffff;
   }
   .hebergements-title {
     display: flex;
@@ -735,20 +726,19 @@ footer {
   .hebergements-cards {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Spacing between cards */
-    margin: 0px; /* Top and bottom margin for some spacing */
+    gap: 20px;
+    margin: 0px;
   }
 
-  /* Styles for each card */
   .hebergements-cards .card {
     min-height: 200px;
 
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
-    border-radius: 20px; /* Rounded corners */
-    overflow: hidden; /* Hide any overflowing content */
-    transition: transform 0.3s; /* Smooth transformation effect */
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
   }
 
   /* Styles for card image */
@@ -761,7 +751,7 @@ footer {
 
   /* Styles for card content */
   .hebergements-cards .card-content {
-    padding: 10px; /* Padding all around for spacing */
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -772,7 +762,7 @@ footer {
   .hebergements-cards .card-title {
     margin-top: 1px;
     margin-bottom: 4px;
-    font-weight: bold; /* Bold font for the title */
+    font-weight: bold;
   }
 
   /* Styles for card subtitle (price) */
@@ -780,9 +770,8 @@ footer {
     margin: 0;
     padding-top: 4px;
     padding-bottom: 3px;
-
-    font-size: 13 px;
-    color: #4a4a4a; /* Slight grey color for subtitle */
+    font-size: 13px;
+    color: #4a4a4a;
   }
 
   /* Styles for card rating */
@@ -797,12 +786,9 @@ footer {
   }
   /****** Populaires ***********/
   .populaires {
-    order: 1; /* La section populaires sera affichée en premier */
+    order: 1;
     width: 100%;
-
-    background-color: var(
-      --main-bg-color
-    ) !important; /* Mettez ici la couleur de fond souhaitée */
+    background-color: var(--main-bg-color) !important;
   }
   .populaires-cards {
     display: grid;
